@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('Api')->group(function (){
     // V1
-    Route::namespace('V1')->prefix('v1')->group(base_path('routes/api/v1.php'));
+    Route::namespace('V1')->prefix('v1')->group(
+        base_path('routes/api/v1.php')
+    );
 });
 
