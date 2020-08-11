@@ -13,7 +13,7 @@ class IdeHelperServiceMeta extends Command
      *
      * @var string
      */
-    protected $signature = 'ide-helper:meta-with-services';
+    protected $name = 'ide-helper:meta-with-services';
 
     /**
      * The console command description.

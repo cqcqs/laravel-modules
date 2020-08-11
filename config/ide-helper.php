@@ -218,4 +218,8 @@ return array(
     */
     'include_class_docblocks' => false,
 
+    'service_directories' => [
+        app_path('Services')
+    ]
+
 );

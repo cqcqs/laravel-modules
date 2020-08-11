@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Api\V1;
+namespace App\Http\Requests\Api;
 
 use App\Http\Requests\ApiRequest;
 
-class LiveStoreRequest extends ApiRequest
+class LiveListRequest extends ApiRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class LiveStoreRequest extends ApiRequest
     public function rules()
     {
         return [
-            'subject' => 'required'
+            'id' => 'required'
         ];
     }
 }
