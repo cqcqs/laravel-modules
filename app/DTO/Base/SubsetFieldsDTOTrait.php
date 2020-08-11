@@ -31,13 +31,22 @@ trait SubsetFieldsDTOTrait
             return;
         }
 
-        $fields = explode(',', $fields);
-        if (!count($fields)) {
+        $fields = collect(str_getcsv($fields))->map(function ($item){
+            $item = trim($item);
+            if (!$item) {
+                return null;
+            }
+            return $item;
+        })->filter(function ($item) {
+            return !!$item;
+        });
+
+        if (!$fields->count()) {
             $this->fields = [];
             return;
         }
 
-        $this->fields = $fields;
+        $this->fields = $fields->toArray();
     }
 
     /**
