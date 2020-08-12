@@ -91,8 +91,10 @@ public function list() : ResponseHelper
 }
 ```
 
-## Link
+## Links
 
 Blog：[Stephen Blog](https://www.stephen520.cn/)
+
+laravel-mode：[laravel-mode](https://github.com/cqcqs/laravel-mode)
 
 > 正在完善，并且后期将提供composer包安装
