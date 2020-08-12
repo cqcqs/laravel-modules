@@ -1,7 +1,7 @@
 <?php
 namespace App\Commons\Kernels;
 
-use App\Common\Contracts\RepositoryInterface;
+use App\Commons\Contracts\RepositoryInterface;
 use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
