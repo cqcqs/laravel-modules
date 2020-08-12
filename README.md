@@ -2,6 +2,8 @@
 
 基于 `Laravel7` 实现的一套开发规范，在原路由层（Route）、控制器层（Controller）上增加数据传输层（DTO）、业务逻辑层（Service）、数据映射层（Repository），并且建议以面向对象的思想进行开发。
 
+Route（路由） > MiddleWare（中间件） > Request（表单验证） > Controller（控制器） > DTO（数据传输层） > Service（业务逻辑层） > Repository（数据映射层） > Model（模型）
+
 > 项目正逐步完善中……
 
 ## Controller
