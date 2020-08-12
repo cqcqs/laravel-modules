@@ -2,41 +2,39 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
+use Illuminate\Console\GeneratorCommand;
 
-class MakeService extends Command
+class MakeService extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'make:service';
+    protected $signature = 'make:service {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Create Service Class File';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
+     * @return string
      */
-    public function __construct()
+    protected function getStub()
     {
-        parent::__construct();
+        return __DIR__ . '/Stubs/Service.stub';
     }
 
     /**
-     * Execute the console command.
-     *
-     * @return int
+     * @param string $rootNamespace
+     * @return string
      */
-    public function handle()
+    protected function getDefaultNamespace($rootNamespace)
     {
-        return 0;
+        return $rootNamespace . '\Services';
     }
+
 }

@@ -1,0 +1,12 @@
+<?php
+namespace DummyNamespace;
+
+use App\Commons\Kernels\Service;
+
+class DummyClass extends Service
+{
+    public function __construct()
+    {
+        // todo
+    }
+}

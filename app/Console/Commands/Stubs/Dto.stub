@@ -1,0 +1,9 @@
+<?php
+namespace DummyNamespace;
+
+use App\Commons\Kernels\DTO;
+
+class DummyClass extends DTO
+{
+
+}
