@@ -2,12 +2,13 @@
 namespace DummyNamespace;
 
 use App\Commons\Kernels\Repository;
+ModelNamespace;
 
 class DummyClass extends Repository
 {
     public function model()
     {
         // todo Model Class
-        return '';
+        return ModelClass;
     }
 }
