@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="58583752-e787-4d7c-a140-26987bee2132" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Commons/Contracts/RepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Contracts/RepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Commons/Helpers/DTOHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Helpers/DTOHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Commons/Kernels/DTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Kernels/DTO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Commons/Kernels/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Kernels/Repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/MakeDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/MakeDTO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/MakeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/MakeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/MakeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/MakeService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/LiveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/LiveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Live.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Live.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Api/V1/LiveService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Api/V1/LiveService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/v1.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/v1.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +38,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,19 +159,27 @@
   <component name="ProjectId" id="1fx6P4yfrlGQIpmyN2sRBEMIofr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\web\laravel-modules\app\PO\Base" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\web\laravel\app\Events\System" />
     </key>
@@ -161,18 +189,6 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -186,24 +202,61 @@
       <updated>1596956915214</updated>
       <workItem from="1596956917632" duration="6968000" />
       <workItem from="1597147370099" duration="4054000" />
+      <workItem from="1600916526862" duration="11941000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1600916728373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1600916728373" />
     <state x="609" y="370" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597234525506">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="609" y="370" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1597234525506" />
-    <state x="714" y="490" key="NewPhpFileDialog" timestamp="1597234136176">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="746" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1600935757784">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="746" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600935757784" />
+    <state x="777" y="273" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600926783071">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="273" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600926783071" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600927543241">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600927543241" />
+    <state x="765" y="455" key="NewPhpFileDialog" timestamp="1600935553975">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="490" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597234136176" />
+    <state x="765" y="455" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600935553975" />
     <state x="477" y="290" width="837" height="540" key="find.popup" timestamp="1597233866128">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="477" y="290" width="837" height="540" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1597233866128" />
+    <state x="838" y="250" key="ftp.server.browser" timestamp="1600916722161">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="838" y="250" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1600916722161" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600935744032">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600935744032" />
   </component>
 </project>

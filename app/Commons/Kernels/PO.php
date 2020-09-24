@@ -1,7 +1,7 @@
 <?php
 namespace App\Commons\Kernels;
 
-abstract class DTO extends DataTransfer
+abstract class PO extends DataTransfer
 {
 
 }

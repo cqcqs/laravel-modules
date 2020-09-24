@@ -3,23 +3,32 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Commons\Helpers\ServiceHelper;
-use App\DTO\CommonDTO;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\LiveListRequest;
 use App\Commons\Helpers\ResponseHelper;
+use Illuminate\Http\Request;
 
 class LiveController extends Controller
 {
     /**
-     * @param LiveListRequest $request
      * @return ResponseHelper
      */
-    public function list(LiveListRequest $request) : ResponseHelper
+    public function list() : ResponseHelper
     {
-        $commonDTO = new CommonDTO([
-            'id' => $request->post('id')
-        ]);
+        return ServiceHelper::make('Api\\V1\\LiveService')->list();
+    }
 
-        return ServiceHelper::make('Api\\V1\\LiveService')->list($commonDTO);
+    public function store()
+    {
+        return ServiceHelper::make('Api\\V1\\LiveService')->store();
+    }
+
+    public function show()
+    {
+        return ServiceHelper::make('Api\\V1\\LiveService')->show();
+    }
+
+    public function destroy()
+    {
+        return ServiceHelper::make('Api\\V1\\LiveService')->destroy();
     }
 }

@@ -1,20 +1,46 @@
 <?php
 namespace App\Commons\Contracts;
 
+use App\PO\FieldsPO;
+use App\PO\FindRowPO;
+use App\PO\GetListPO;
+
 interface RepositoryInterface
 {
-    public function all(array $columns=['*']);
+    /**
+     * @param GetListPO $getListPO
+     * @return mixed
+     */
+    public function all(GetListPO $getListPO);
 
-    public function paginate(int $perPage = 20, array $columns=['*']);
+    /**
+     * @param GetListPO $getListPO
+     * @return mixed
+     */
+    public function paginate(GetListPO $getListPO);
 
-    public function create(array $data);
+    /**
+     * @param FieldsPO $fieldsPO
+     * @return mixed
+     */
+    public function insert(FieldsPO $fieldsPO);
 
-    public function update(array $data, int $id);
+    /**
+     * @param FieldsPO $fieldsPO
+     * @return mixed
+     */
+    public function update(FieldsPO $fieldsPO);
 
-    public function delete(int $id);
+    /**
+     * @param FindRowPO $findRowPO
+     * @return mixed
+     */
+    public function delete(FindRowPO $findRowPO);
 
-    public function find(int $id, array $columns=['*']);
-
-    public function findBy(string $attribute, $value, array $columns=['*']);
+    /**
+     * @param FindRowPO $findRowPO
+     * @return mixed
+     */
+    public function find(FindRowPO $findRowPO);
 
 }

@@ -2,6 +2,9 @@
 namespace App\Commons\Kernels;
 
 use App\Commons\Contracts\RepositoryInterface;
+use App\PO\FieldsPO;
+use App\PO\FindRowPO;
+use App\PO\GetListPO;
 use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
@@ -35,73 +38,96 @@ abstract class Repository implements RepositoryInterface
     abstract function model();
 
     /**
-     * @param array $columns
-     * @return Builder[]|Collection
+     * @param GetListPO $getListPO
+     * @return LengthAwarePaginator|Builder[]|Collection|mixed
      */
-    public function all(array $columns = ['*'])
+    public function all(GetListPO $getListPO)
     {
-        return $this->model->get($columns);
+        // condition where
+        $getListPO->getWhere() && $this->model->where($getListPO->getWhere());
+
+        // condition whereIn
+        $getListPO->getWhereIn() && $this->model->whereIn($getListPO->getWhereIn()[0], $getListPO->getWhereIn()[1]);
+
+        // condition whereNotIn
+        $getListPO->getWhereNotIn() && $this->model->whereNotIn($getListPO->getWhereNotIn()[0], $getListPO->getWhereNotIn()[1]);
+
+        // order by
+        if ($orderBy = $getListPO->getOrderBy()) {
+            foreach ($orderBy as $order) {
+                $this->model->orderBy($order[0], $order[1] ?? 'asc');
+            }
+        }
+
+        // load collection or pagination
+        if (!$getListPO->isLoadCollection()) {
+            return $this->paginate($getListPO, $this->model);
+        }
+
+        return $this->model->get($getListPO->getFields() ?? ['*']);
     }
 
     /**
-     * @param int $perPage
-     * @param array $columns
+     * 分页查询
+     * @param GetListPO $getListPO
+     * @param null $model
      * @return LengthAwarePaginator
      */
-    public function paginate(int $perPage = 20, array $columns = ['*'])
+    public function paginate(GetListPO $getListPO, $model = null)
     {
-        return $this->model->paginate($perPage, $columns);
+        if (!$model) {
+            $model = $this->model;
+        }
+        return $model->paginate(
+            $getListPO->getLimit(),
+            $getListPO->getFields() ?? '*',
+            null,
+            $getListPO->getPage()
+        );
     }
 
     /**
-     * @param array $data
-     * @return Builder|Model
-     */
-    public function create(array $data)
-    {
-        return $this->model->create($data);
-    }
-
-    /**
-     * @param array $data
-     * @param int $id
-     * @param string $attribute
+     * 插入数据
+     * @param FieldsPO $fieldsPO
      * @return int
      */
-    public function update(array $data, int $id, $attribute="id")
+    public function insert(FieldsPO $fieldsPO)
     {
-        return $this->model->where($attribute, '=', $id)->update($data);
+        return $this->model->insertGetId($fieldsPO->toArray());
     }
 
     /**
-     * @param int $id
-     * @param string $attribute
-     * @return mixed
+     * 修改数据（根据主键ID）
+     * @param FieldsPO $fieldsPO
+     * @return bool|int
      */
-    public function delete(int $id, $attribute="id")
+    public function update(FieldsPO $fieldsPO)
     {
-        return $this->model->where($attribute, '=', $id)->delete();
+        return $this->model->find($fieldsPO->getId())->update($fieldsPO->toArray());
     }
 
     /**
-     * @param int $id
-     * @param array $columns
+     * 删除数据（根据主键ID）
+     * @param FindRowPO $findRowPO
+     * @return bool|mixed|null
+     * @throws Exception
+     */
+    public function delete(FindRowPO $findRowPO)
+    {
+        return $this->model->find($findRowPO->getId())->delete();
+    }
+
+    /**
+     * 查询一条数据
+     * @param FindRowPO $findRowPO
      * @return Builder|Builder[]|Collection|Model|null
      */
-    public function find(int $id, array $columns = ['*'])
+    public function find(FindRowPO $findRowPO)
     {
-        return $this->model->find($id, $columns);
-    }
-
-    /**
-     * @param string $attribute
-     * @param $value
-     * @param array $columns
-     * @return Builder|Model|object|null
-     */
-    public function findBy(string $attribute, $value, array $columns = ['*'])
-    {
-        return $this->model->where($attribute, '=', $value)->first($columns);
+        return $this->model->find(
+            $findRowPO->getId(),
+            $findRowPO->getFields() ?? ['*']
+        );
     }
 
     /**
