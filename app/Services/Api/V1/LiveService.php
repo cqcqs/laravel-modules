@@ -26,10 +26,17 @@ class LiveService extends Service
     {
         $listPO = new GetListPO();
         $listPO->setLoadCollection(true);
-        $listPO->setWhere([
+        // Where条件查询
+        /*$listPO->setWhere([
             ['subject', 'like', '%95092%']
         ]);
+        // WhereIn条件查询
         $listPO->setWhereIn(['status', [2,3]]);
+        // 排序
+        $listPO->setOrderBy([
+            ['status', 'desc'],
+            ['subject', 'asc'],
+        ]);*/
         $list = $this->live->all($listPO);
 
         $response = new ResponseHelper();

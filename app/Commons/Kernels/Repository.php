@@ -44,13 +44,21 @@ abstract class Repository implements RepositoryInterface
     public function all(GetListPO $getListPO)
     {
         // condition where
-        $getListPO->getWhere() && $this->model->where($getListPO->getWhere());
+        $getListPO->getWhere() && $this->model->where(
+            $getListPO->getWhere()
+        );
 
         // condition whereIn
-        $getListPO->getWhereIn() && $this->model->whereIn($getListPO->getWhereIn()[0], $getListPO->getWhereIn()[1]);
+        $getListPO->getWhereIn() && $this->model->whereIn(
+            $getListPO->getWhereIn()[0],
+            $getListPO->getWhereIn()[1]
+        );
 
         // condition whereNotIn
-        $getListPO->getWhereNotIn() && $this->model->whereNotIn($getListPO->getWhereNotIn()[0], $getListPO->getWhereNotIn()[1]);
+        $getListPO->getWhereNotIn() && $this->model->whereNotIn(
+            $getListPO->getWhereNotIn()[0],
+            $getListPO->getWhereNotIn()[1]
+        );
 
         // order by
         if ($orderBy = $getListPO->getOrderBy()) {

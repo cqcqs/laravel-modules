@@ -20,16 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58583752-e787-4d7c-a140-26987bee2132" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Commons/Contracts/RepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Contracts/RepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Commons/Helpers/DTOHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Helpers/DTOHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Commons/Kernels/DTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Kernels/DTO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Commons/Kernels/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commons/Kernels/Repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/LiveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/LiveController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Live.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Live.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Api/V1/LiveService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Api/V1/LiveService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/v1.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/v1.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +164,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lib/laravel-mode" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -202,7 +195,7 @@
       <updated>1596956915214</updated>
       <workItem from="1596956917632" duration="6968000" />
       <workItem from="1597147370099" duration="4054000" />
-      <workItem from="1600916526862" duration="11941000" />
+      <workItem from="1600916526862" duration="21184000" />
     </task>
     <servers />
   </component>
@@ -241,6 +234,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600927543241" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601002636058">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601002636058" />
     <state x="765" y="455" key="NewPhpFileDialog" timestamp="1600935553975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
